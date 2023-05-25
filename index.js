@@ -9,3 +9,6 @@ navBar.addEventListener('click', function() {
 // window.onmousedown = e => {
 //     e.target.style.backgroundColor = "red";
 // };
+// window.onload = function() {
+//     document.getElementById("main__video").play();
+// }

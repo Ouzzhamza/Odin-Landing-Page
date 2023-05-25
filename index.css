@@ -2,8 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* overflow-x: hidden; */
-    /* overflow-y: hidden; */
 }
 
 body {
@@ -56,10 +54,11 @@ ul {
 #Logo {
     color: #E5E7EB;
     font-family: 'Tangerine', serif;
-    font-size: 35px;
+    font-size: 4vw;
     text-shadow: 4px 4px 4px #aaa;
     font-weight: 600;
     padding: 7px;
+    margin-top: 15px;
 }
 
 .navbar__menu {
@@ -144,6 +143,7 @@ ul {
         opacity: 1;
     }
     #Logo {
+        font-size: large;
         padding: 20px;
         transition: all 0.9s ease-in-out;
     }
@@ -193,7 +193,7 @@ ul {
 
 .main__content h1 {
     display: block;
-    font-size: 32px;
+    font-size: 3vw;
     font-weight: 700;
     font-family: 'roboto', sans-serif;
     background-color: #0c85c7;
@@ -210,7 +210,7 @@ ul {
     background-color: #0c85c7;
     background-image: linear-gradient(to top, #0c85c7 30%, white 50%);
     font-weight: 700;
-    font-size: 20px;
+    font-size: 2vw;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -339,7 +339,8 @@ ul {
     height: 500px;
     width: 60%;
     overflow: hidden;
-    /* transform: translate(0%, 0%); */
+    transform: translate(0%, 0%);
+    /* background-color: #1F2937; */
 }
 
 .awards>.image {
