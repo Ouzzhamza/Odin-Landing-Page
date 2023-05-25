@@ -5,3 +5,7 @@ navBar.addEventListener('click', function() {
     navBar.classList.toggle('is-ative');
     links.classList.toggle('active');
 });
+
+// window.onmousedown = e => {
+//     e.target.style.backgroundColor = "red";
+// };
