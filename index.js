@@ -6,9 +6,19 @@ navBar.addEventListener('click', function() {
     links.classList.toggle('active');
 });
 
-// window.onmousedown = e => {
-//     e.target.style.backgroundColor = "red";
-// };
-// window.onload = function() {
-//     document.getElementById("main__video").play();
-// }
+var swiper = new Swiper('.swiper__container', {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+    },
+});

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
 </head>
@@ -48,24 +49,55 @@
                 <button><a href="/index.html">Managing</a></button>
             </ul>
         </div>
-        <div class="awards">
-            <img class="image" src="/pictures/achivements/1.png" alt="achivement_image">
-            <img class="image" src="/pictures/achivements/best Platform award (1).png" alt="achivement_image">
-            <img class="image" src="/pictures/achivements/best technology (1).png" alt="achivement_image">
-            <img class="image" src="/pictures/achivements/best technology.png" alt="achivement_image">
-            <img class="image" src="/pictures/achivements/best-platform.png" alt="achivement_image">
-            <img class="image" src="/pictures/achivements/certificate.png" alt="achivement_image">
-            <img class="image" src="/pictures/achivements/impact.png" alt="achivement_image">
-            <img class="image" src="/pictures/achivements/technologie.png" alt="achivement_image">
+        <div class="dynamic">
+            <div class="awards" id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+                <img class="image" src="/pictures/achivements/1.png" draggable="false" alt="achivement_image">
+                <img class="image" src="/pictures/achivements/best Platform award (1).png" draggable="false" alt="achivement_image">
+                <img class="image" src="/pictures/achivements/best technology (1).png" draggable="false" alt="achivement_image">
+                <img class="image" src="/pictures/achivements/best technology.png" draggable="false" alt="achivement_image">
+                <img class="image" src="/pictures/achivements/best-platform.png" draggable="false" alt="achivement_image">
+                <img class="image" src="/pictures/achivements/certificate.png" draggable="false" alt="achivement_image">
+                <img class="image" src="/pictures/achivements/impact.png" draggable="false" alt="achivement_image">
+                <img class="image" src="/pictures/achivements/technologie.png" draggable="false" alt="achivement_image">
+                <img class="image" src="/pictures/achivements/1.png" draggable="false" alt="achivement_image">
+                <img class="image" src="/pictures/achivements/best Platform award (1).png" draggable="false" alt="achivement_image">
+                <img class="image" src="/pictures/achivements/best technology (1).png" draggable="false" alt="achivement_image">
+                <img class="image" src="/pictures/achivements/best technology.png" draggable="false" alt="achivement_image">
+                <img class="image" src="/pictures/achivements/best-platform.png" draggable="false" alt="achivement_image">
+                <img class="image" src="/pictures/achivements/certificate.png" draggable="false" alt="achivement_image">
+                <img class="image" src="/pictures/achivements/impact.png" draggable="false" alt="achivement_image">
+                <img class="image" src="/pictures/achivements/technologie.png" draggable="false" alt="achivement_image">
+            </div>
         </div>
 
     </div>
-    <div class="reviews">
-        hello there
-    </div>
-    </div>
-    <script src="index.js"></script>
-
+    <section>
+        <div class="swiper__container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonialbox">
+                        <img src="/pictures/people/christin.jpg" id="userspic" alt=" quote ">
+                        <div class="content ">
+                            <p>"Since we started with Cloudbeds, we’ve increased our reservations by 25% "</p>
+                            <h4>Albero Lozano</h4>
+                            <p> Head of Reservations and E-Commerce at Hotel Las Cortes de Cádiz</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="testimonialbox ">
+                        <img src=" " alt="quote ">
+                        <div class="content ">
+                            <p>"Since we started with Cloudbeds, we’ve increased our reservations by 25% "</p>
+                            <h4>Albero Lozano</h4>
+                            <p> Head of Reservations and E-Commerce at Hotel Las Cortes de Cádiz</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js "></script>
+    <script src="index.js "></script>
 </body>
 
 </html
