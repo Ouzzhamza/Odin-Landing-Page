@@ -174,9 +174,10 @@ ul {
 }
 
 .main {
-    background-color: #1F2937;
+    background-color: #0a172c;
     background-image: url("https://static-cse.canva.com/_next/static/assets/wave_w2881xh801_a775fc2518c0a6ca438299351b5d48a3faf59e7348ac4a6f5f88b3b68fd5a06a.png");
-    background-size: 130% 600px;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 .main__container {
@@ -196,25 +197,27 @@ ul {
     font-size: 4vw;
     font-weight: 700;
     font-family: 'roboto', sans-serif;
-    background-color: #0c85c7;
+    color: #175cf1;
+    /* background-color: #0c85c7;
     background-image: linear-gradient(to top, white 0%, #0c85c7 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; */
 }
 
 .main__content p {
     font-family: 'roboto', sans-serif;
-    background-color: #0c85c7;
-    background-image: linear-gradient(to top, #0c85c7 30%, white 50%);
-    font-weight: 700;
     font-size: 2vw;
+    font-weight: 700;
+    color: #000000;
+    /* background-color: #0c85c7;
+    background-image: linear-gradient(to top, #0c85c7 30%, white 50%);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; */
 }
 
 .main__image--container {
@@ -506,7 +509,6 @@ section {
     border: 1px solid;
     border-color: #BBC1CA;
     height: 25px;
-    outline: 0;
 }
 
 .subscription__footer button {
@@ -523,6 +525,6 @@ section {
 }
 
 .subscription__footer button:hover {
-    background-color: #0a348f;
+    background-color: #06308a;
     -webkit-transition: background-color 1000ms linear;
 }
