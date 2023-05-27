@@ -29,7 +29,6 @@ ul {
 .navbar {
     background-color: #1F2937;
     opacity: 0.95;
-    height: 52px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,7 +53,7 @@ ul {
 #Logo {
     color: #E5E7EB;
     font-family: 'Tangerine', serif;
-    font-size: 4vw;
+    font-size: 60px;
     text-shadow: 4px 4px 4px #aaa;
     font-weight: 600;
     padding: 7px;
@@ -76,27 +75,28 @@ ul {
     justify-content: space-between;
     padding: 0 1rem;
     height: 100%;
+    font-size: 25px;
 }
 
 .navbar__btn {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 25px;
 }
 
 .Login {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1px 7px;
-    height: 100%;
-    width: 100%;
     background-color: transparent;
     border-width: 1px;
     border-style: solid;
     border-color: white;
     border-radius: 10px;
     color: white;
+    height: 35px;
+    width: 100px;
 }
 
 .Login:hover {
@@ -143,7 +143,7 @@ ul {
         opacity: 1;
     }
     #Logo {
-        font-size: large;
+        font-size: 40px;
         padding: 20px;
         transition: all 0.9s ease-in-out;
     }
@@ -198,13 +198,6 @@ ul {
     font-weight: 700;
     font-family: 'roboto', sans-serif;
     color: #175cf1;
-    /* background-color: #0c85c7;
-    background-image: linear-gradient(to top, white 0%, #0c85c7 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent; */
 }
 
 .main__content p {
@@ -212,12 +205,6 @@ ul {
     font-size: 2vw;
     font-weight: 700;
     color: #000000;
-    /* background-color: #0c85c7;
-    background-image: linear-gradient(to top, #0c85c7 30%, white 50%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent; */
 }
 
 .main__image--container {
@@ -288,7 +275,7 @@ ul {
 
 .information__container {
     display: flex;
-    height: 400px;
+    height: 600px;
     flex-direction: column;
     background-color: white;
     align-items: center;
@@ -304,26 +291,32 @@ ul {
     height: 50%;
     align-items: center;
     color: #1F2937;
+    gap: 50px;
 }
 
 .services h1 {
     height: 80px;
     font-family: 'roboto', sans-serif;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 4.5vw;
+}
+
+.services ul {
+    display: flex;
+    gap: 80px
 }
 
 .services ul>button {
     color: #E5E7EB;
     font-weight: 900;
-    font-size: 18px;
+    font-size: 25px;
     justify-content: center;
     align-self: center;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     background-color: transparent;
     border: 1px solid black;
-    width: 125px;
-    height: 50px;
+    width: 150px;
+    height: 60px;
     border-radius: 10px;
 }
 
@@ -412,6 +405,7 @@ section {
 
 .swiper__container {
     width: 100%;
+    /* height: 500px; */
     padding-top: 50px;
     padding-bottom: 50px;
     font-family: 'roboto', sans-serif;
@@ -421,15 +415,14 @@ section {
     display: flex;
     background-position: center;
     background-size: cover;
-    width: 250px;
-    height: 300px;
+    width: 400px;
+    height: 450px;
     background: white;
     border-radius: 10px;
 }
 
 .swiper-slide img {
     display: block;
-    width: 100%;
 }
 
 .testimonialbox {
@@ -444,21 +437,13 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 90px;
-}
-
-.testimonialbox .user {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 90px;
+    padding-top: 50px;
 }
 
 #userspic {
     border-radius: 100%;
     justify-self: flex-start;
-    width: 60px;
-    height: 60px;
+    height: 100px;
 }
 
 .testimonialbox .content {
@@ -466,16 +451,18 @@ section {
     flex-direction: column;
 }
 
-.testimonialbox .content h5 {
-    margin-left: 10px;
+.testimonialbox .content h3 {
+    margin-left: 30px;
     margin-right: 10px;
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .testimonialbox .content p {
     margin-left: 10px;
     margin-right: 10px;
     padding-top: 10px;
+    font-size: 20px;
 }
 
 .footer__container {
@@ -489,8 +476,8 @@ section {
 
 .footer__content {
     background-color: #175cf1;
-    height: 100px;
-    width: 70%;
+    height: 80%;
+    width: 90%;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -501,27 +488,32 @@ section {
 }
 
 .footer__message p {
-    font-size: 15px;
+    font-size: 25px;
 }
 
 .subscription__footer input {
     border-radius: 2px;
     border: 1px solid;
     border-color: #BBC1CA;
-    height: 25px;
+    height: 45px;
+    width: 300px;
+    border-radius: 5px;
+    font-size: 20px;
+    outline: 0;
 }
 
 .subscription__footer button {
     color: white;
-    font-size: 15px;
+    font-size: 20px;
     justify-content: center;
     align-self: center;
     background-color: transparent;
     border: 1px solid white;
-    height: 27px;
-    width: 100px;
+    height: 43px;
+    width: 120px;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .subscription__footer button:hover {
