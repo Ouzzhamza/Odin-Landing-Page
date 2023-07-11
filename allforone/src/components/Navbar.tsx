@@ -1,6 +1,7 @@
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { useState } from "react";
-import { log } from "console";
+import { useState, useEffect } from "react";
+
+
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -8,24 +9,39 @@ const Navbar = () => {
 
   const HandleNav = () => {
     setNav(!nav);
+    if (window.innerWidth > 1280) 
+      setServices(false)
   };
 
+  const HandleServices = () => {
+
+    setServices(!services)
+  }
+
+  useEffect (() => {
+  
+    window.addEventListener("resize", HandleNav);
+
+    return () => {
+      window.removeEventListener("resize", HandleNav);
+    };
+
+  }, []);
   return (
     <nav className="navbar flex justify-around items-center h-24 text-white bg-transparetnt">
       <h1 className="Logo text-5xl font-bold text-cyan-700">AllForOne</h1>
-      <ul className=" hidden xl:flex justify-between">
+      <ul className="hidden xl:flex justify-between">
         <li
           onMouseEnter={() => setServices(true)}
           onMouseLeave={() => setServices(false)}
           className="text-xl p-7 cursor-pointer w-[300px] text-end"
         >
-          {" "}
           <h1 className=" hover:text-cyan-700 ">Services</h1>
           <ul
             className={
               services
                 ? "absolute flex flex-col text-center top-20 gap-10"
-                : "absolute flex flex-col text-center top-20 gap-10 hidden"
+                : "hidden"
             }
           >
             <li>
@@ -76,11 +92,18 @@ const Navbar = () => {
         }
       >
         <ul>
-          <li className="p-4">
-            <a className="p-4 text-2xl hover:text-cyan-700" href="./Navbar.jsx">
-              Services
-            </a>
-            <ul className="right-[50%]">
+          <li
+            onClick={HandleServices}
+            className=" p-4"
+          >
+            <h1 className="pl-4 text-2xl hover:text-cyan-700 cursor-pointer">Services</h1>
+            <ul
+              className={
+                services
+                  ? "flex flex-col pt-4 h-[200px] justify-between "
+                  : "hidden"
+              }
+            >
               <li>
                 <a className="text-xl hover:text-cyan-700" href="./Navbar.jsx">
                   Property Management
