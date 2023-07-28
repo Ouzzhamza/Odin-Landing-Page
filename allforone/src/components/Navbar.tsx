@@ -1,150 +1,105 @@
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const [services, setServices] = useState(false);
 
   const HandleNav = () => {
     setNav(!nav);
-    if (window.innerWidth > 1280) 
-      setServices(false)
   };
 
-  const HandleServices = () => {
 
-    setServices(!services)
-  }
-
-  useEffect (() => {
-  
-    window.addEventListener("resize", HandleNav);
-
-    return () => {
-      window.removeEventListener("resize", HandleNav);
-    };
-
-  }, []);
   return (
-    <nav className="navbar flex justify-around items-center h-24 text-white bg-transparetnt">
-      <h1 className="Logo text-5xl font-bold text-cyan-700">AllForOne</h1>
+    <nav className="navbar flex justify-around items-center h-24 bg-transparetnt z-20 relative">
+      <h1 className="Logo text-5xl font-bold text-white">
+        <Link className="text-white font-bold hover:text-cyan-600" to='./'>AllForOne</Link>
+      </h1>
       <ul className="hidden xl:flex justify-between">
-        <li
-          onMouseEnter={() => setServices(true)}
-          onMouseLeave={() => setServices(false)}
-          className="text-xl p-7 cursor-pointer w-[300px] text-end"
-        >
-          <h1 className=" hover:text-cyan-700 ">Services</h1>
-          <ul
-            className={
-              services
-                ? "absolute flex flex-col text-center top-20 gap-10"
-                : "hidden"
-            }
-          >
-            <li>
-              <a className="text-xl hover:text-cyan-700" href="./Navbar.jsx">
-                Property Management
-              </a>
-            </li>
-            <li>
-              <a className="text-xl hover:text-cyan-700" href="./Navbar.jsx">
-                Booking Engine
-              </a>
-            </li>
-            <li>
-              <a className="text-xl hover:text-cyan-700" href="./Navbar.jsx">
-                Revenue Management
-              </a>
-            </li>
-            <li>
-              <a className="text-xl hover:text-cyan-700" href="./Navbar.jsx">
-                Advertising
-              </a>
-            </li>
-          </ul>
+        <li className="text-xl p-7">
+          <Link className="text-white font-bold hover:text-cyan-600" to="./Services">Services </Link>
         </li>
-        <li className="text-xl p-7 hover:text-cyan-700 cursor-pointer">
-          Pricing
+        <li className="text-xl p-7">
+          <Link className="text-white font-bold hover:text-cyan-600" to="./Navbar.tsx">Pricing</Link>
         </li>
-        <li className="text-xl p-7 hover:text-cyan-700 cursor-pointer">
-          Company
+        <li className="text-xl p-7">
+          <Link className="text-white font-bold hover:text-cyan-600" to="./Navbar.tsx">Company</Link>
         </li>
       </ul>
       <ul className="hidden xl:flex justify-between">
-        <li className="text-xl p-7 hover:text-cyan-700 cursor-pointer">
-          Register
+        <li className="text-xl p-7">
+          <Link className="text-white font-bold hover:text-cyan-600" to="./Register">Register</Link>
         </li>
-        <li className="text-xl p-7 hover:text-cyan-700 cursor-pointer">
-          Login
+        <li className="text-xl p-7">
+          <Link className="text-white font-bold hover:text-cyan-600" to="./Login">Login</Link>
         </li>
       </ul>
       <div onClick={HandleNav} className="flex xl:hidden">
-        {!nav ? <AiOutlineMenu size={30} /> : <AiOutlineClose size={30} />}
+        {!nav ? (
+          <AiOutlineMenu size={30} color="black" />
+        ) : (
+          <AiOutlineClose size={30} color="black" />
+        )}
       </div>
       <div
         className={
           nav
-            ? "flex justify-center absolute top-[15%] w-[70%] border-b border-b-cyan-700 ease-out duration-700 xl:hidden"
+            ? "flex justify-center absolute top-[15%] w-[70%] border-b border-b-black ease-out duration-700 xl:hidden"
             : "flex justify-center absolute -top-[100%] ease-out duration-1000 xl:hidden"
         }
       >
         <ul>
-          <li
-            onClick={HandleServices}
-            className=" p-4"
-          >
-            <h1 className="pl-4 text-2xl hover:text-cyan-700 cursor-pointer">Services</h1>
-            <ul
-              className={
-                services
-                  ? "flex flex-col pt-4 h-[200px] justify-between "
-                  : "hidden"
-              }
-            >
-              <li>
-                <a className="text-xl hover:text-cyan-700" href="./Navbar.jsx">
-                  Property Management
-                </a>
-              </li>
-              <li>
-                <a className="text-xl hover:text-cyan-700" href="./Navbar.jsx">
-                  Booking Engine
-                </a>
-              </li>
-              <li>
-                <a className="text-xl hover:text-cyan-700" href="./Navbar.jsx">
-                  Revenue Management
-                </a>
-              </li>
-              <li>
-                <a className="text-xl hover:text-cyan-700" href="./Navbar.jsx">
-                  Advertising
-                </a>
-              </li>
-            </ul>
+          <li className="p-4">
+            <button className=" bg-black h-[50px] w-[130px] rounded-xl">
+              <Link
+                className="p-4 text-2xl hover:text-cyan-600"
+                to="./Navbar.tsx"
+              >
+                Services
+              </Link>
+            </button>
           </li>
           <li className="p-4">
-            <a className="p-4 text-2xl hover:text-cyan-700" href="./Navbar.jsx">
-              Pricing
-            </a>
+            <button className=" bg-black h-[50px] w-[130px] rounded-xl">
+              <Link
+                className="p-4 text-2xl hover:text-cyan-600"
+                to="./Navbar.tsx"
+              >
+                Pricing
+              </Link>
+            </button>
           </li>
           <li className="p-4">
-            <a className="p-4 text-2xl hover:text-cyan-700" href="./Navbar.jsx">
-              Company
-            </a>
+            <button className=" bg-black h-[50px] w-[130px] rounded-xl">
+              <Link
+                className="p-4 text-2xl hover:text-cyan-600"
+                to="./Navbar.tsx"
+              >
+                Company
+              </Link>
+            </button>
           </li>
           <li className="p-4">
-            <a className="p-4 text-2xl hover:text-cyan-700" href="./Navbar.jsx">
-              Register
-            </a>
+            <button className=" bg-black h-[50px] w-[130px] rounded-xl">
+              <Link
+                className="p-4 text-2xl hover:text-cyan-600"
+                to="./Navbar.tsx"
+              >
+                Register
+              </Link>
+            </button>
           </li>
           <li className="p-4">
-            <a className="p-4 text-2xl hover:text-cyan-700" href="./Navbar.jsx">
-              Login
-            </a>
+            <button className=" bg-black h-[50px] w-[130px] rounded-xl">
+              <Link
+                className="p-4 text-2xl hover:text-cyan-600"
+                to="./Navbar.tsx"
+              >
+                Login
+              </Link>
+            </button>
           </li>
         </ul>
       </div>
